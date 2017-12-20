@@ -1,0 +1,38 @@
+{% extends "base.html" %} 
+{% load cms_tags %} 
+
+{% block title %}
+	{% page_attribute "page_title" %}
+{% endblock title %}
+
+{% block page_content %}
+
+<header>
+    <div class="row">
+        <div class="container section-3col-boxes">
+            <div class="row">
+                <div class="col-sm-4 col-md-4 section-col1">
+                    <div class="white-box">
+                        <h2>Expenditure Budget</h2>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 section-col2">
+                    <div class="white-box">
+                        <h2>Union Budget 2018</h2>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 section-col3">
+                    <div class="white-box">
+                        <h2>Reciept Budget</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        {% block content %} 
+        	{% placeholder "content" %} 
+        {% endblock content %}
+    </div>
+</header>
+{% endblock page_content %}
