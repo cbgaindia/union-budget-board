@@ -9,18 +9,39 @@ Untill the first release, please checkout the develop branch.
 [DjangoCMS](https://github.com/divio/django-cms#requirements) - Please setup the basic requirements for django-cms. 
 Python Version - 2.7.x
 
+[Virtualenv](https://virtualenv.pypa.io/en/stable/installation/) - Use a isolated python virtual environment. 
+
 ### Installing
 
-- [Please refer this link](http://django-cms.readthedocs.io/en/latest/how_to/install.html). 
-- Follow the steps untill the part of creating a new project.
-- Instead of setting up a new project, start djangoCMS.
-
+#### Create a virtual environment.
 ```
-cd path/where/project-is-cloned
-python manage.py runserver
+virtualenv union-budget-board
+source union-budget-board/bin/activate
+pip install --upgrade pip
 ```
 
-Make sure you activate the virtual environment. 
+#### Clone the project. 
+```
+cd to/path/where/you-want-to-setup
+git clone https://github.com/cbgaindia/union-budget-board.git
+cd union-budget-board
+```
+#### Install the dependencies. 
+```
+pip install -r requirements.txt
+```
+
+#### Final steps
+```
+python manage.py migrate # Generate the schema for database.
+python manage.py createsuperuser #Run the setup to create an admin.
+python manage.py runserver # Fire up the server. 
+```
+
+#### Check the development branch 
+```
+git checkout develop
+```
 
 ## Contributing
 
