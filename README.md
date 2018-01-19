@@ -6,9 +6,6 @@ Untill the first release, please checkout the develop branch.
 
 ### Prerequisites
 
-[DjangoCMS](https://github.com/divio/django-cms#requirements) - Please setup the basic requirements for django-cms. 
-Python Version - 2.7.x
-
 [Virtualenv](https://virtualenv.pypa.io/en/stable/installation/) - Use a isolated python virtual environment. 
 
 ### Installing
