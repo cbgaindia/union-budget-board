@@ -44,10 +44,11 @@ git checkout develop
 
 Contributing guides would be up soon. If still want to contribute and can't wait till the first release, ping the Contributors. 
 
-## Authors
+## Contributors
 
 * **Akshay Verma** - *OpenBudgetsIndia* - [akshay2905](https://github.com/akshay2905)
-
+* **Jayant** - *OpenBudgetsIndia* - [heaven00](https://github.com/heaven00)
+* **Gaurav Godhwani** - *OpenBudgetsIndia* - [gggodhwani](https://github.com/gggodhwani)
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
