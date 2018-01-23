@@ -7,7 +7,7 @@
 
 {% block page_content %}
 
-<header>
+<div class="jumbotron base-page-wrapper">
     <div class="row">
         <div class="container section-3col-boxes">
             <div class="row">
@@ -29,10 +29,12 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
+</div>
+    <div class="container">
         {% block content %} 
         	{% placeholder "content" %} 
         {% endblock content %}
     </div>
-</header>
+
+
 {% endblock page_content %}
