@@ -1,138 +1,58 @@
-{% load cms_tags menu_tags sekizai_tags %}
+{% load cms_tags menu_tags sekizai_tags staticfiles %}
 <!doctype html>
 <html>
 
 <head>
     <title>{% block title %}This is my new project home page{% endblock title %}</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    {% block css_files %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    {% endblock css_files %}
+
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 
     <style type="text/css">
-    /*.nav {
-                padding-left: 0;
-            }
-            .nav li {
-                display: inline;
-                list-style-type: none;
-                padding-right: 20px;
-            }
-            .container {
-                width: 940px;
-                margin: 0 auto
-            }
-            .content {
-                float: left;
-                width: 80%;
-            }
-            .sidebar {
-                float: left;
-                width: 20%;
-            }
-            */
-
-    body {
-        padding-top: 65px;
-        font-family: 'Open Sans', sans-serif;
-    }
-
-    .section-3col-boxes .white-box {
-        position: relative;
-        margin: 0 0 25px;
-        padding-bottom: 25px;
-        /*box-shadow: 0 0 15px rgba(0, 0, 0, .2);*/
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.19), 0 1px 3px rgba(0, 0, 0, 0.23);
-    }
-
-    .white-box {
-        margin: 10px 0 45px;
-        padding: 25px;
-        background: #fff;
-        min-height: 400px;
-    }
-
-    .section-3col-boxes .white-box h2{
-        font-weight: 600;
-        margin-top: 5px;
-        font-size: 22px;
-    }
-
-    nav {
-        border-color: transparent;
-        background-color: ;
-    }
-    header{
-        background: rgb(233, 234, 229) url("https://github.com/cbgaindia/design/blob/master/portal_pages/misc/bg.png");
-    }
-    .navbar{
-        margin-bottom: 0px;
-        min-height: 65px;
-    }
-
-    @media (min-width: 959px) {
-        .section-3col-boxes {
-            padding-bottom: 90px;
-            text-align: center;
-        }
-        .section-3col-boxes .section-col2 {
-            z-index: 2;
-            margin: 0 -30px;
-        }
-        .section-col2 .white-box { min-height: 450px; }
-
-        .section-3col-boxes .section-col1, .section-3col-boxes .section-col3 {
-            z-index: 1;
-            margin-top: 25px;
-
-        }
-    }
+    
     </style>
     {% render_block "css" %}
 </head>
 
 <body>
     {% cms_toolbar %}
-    <div class="container-fluid">
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Brand</a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Link</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                            </ul>
+    
+        {% block navbar %}
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">Top navbar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <!--
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Disabled</a>
+                        </li> -->
+                        {% show_menu 0 100 100 100 %}
                     </ul>
+                    <form class="form-inline mt-2 mt-md-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
                 </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container-fluid -->
-        </nav>
-    </div>
+            </nav>
+        {% endblock navbar %}
+
     <!--
             <ul class="nav nav-pills">
                 {% show_menu 0 100 100 100 %}
@@ -141,6 +61,12 @@
     {% block page_content %}
     {% endblock page_content %}
     {% render_block "js" %}
+
+    {% block js_block %}
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    {% endblock js_block %}
 </body>
 
 </html>
