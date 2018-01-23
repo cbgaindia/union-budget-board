@@ -1,0 +1,23 @@
+{% extends "base.html" %} 
+{% load cms_tags %} 
+
+{% block title %}
+	{% page_attribute "page_title" %}
+{% endblock title %}
+
+{% block page_content %}
+<div class="content-page-outer-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="content-main-card">
+                {% block content %} 
+                    {% placeholder "content" %} 
+                {% endblock content %}
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+
+{% endblock page_content %}
