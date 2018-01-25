@@ -132,6 +132,15 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.messages',
     'cms',
+    'aldryn_apphooks_config',
+    'aldryn_categories',
+    'aldryn_common',
+    'aldryn_newsblog',
+    'aldryn_people',
+    'aldryn_translation_tools',
+    'parler',
+    'sortedm2m',
+    'taggit',
     'menus',
     'sekizai',
     'treebeard',
@@ -180,7 +189,6 @@ CMS_TEMPLATES = (
     ('sidebar_left.html', 'Sidebar Left'),
     ('sidebar_right.html', 'Sidebar Right'),
     ('home.html', 'Homepage'),
-    ('cover.html', 'Cover Page'),
     ('content_page.html', 'Content Page')
 )
 
