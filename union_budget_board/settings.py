@@ -189,7 +189,8 @@ CMS_TEMPLATES = (
     ('sidebar_left.html', 'Sidebar Left'),
     ('sidebar_right.html', 'Sidebar Right'),
     ('home.html', 'Homepage'),
-    ('content_page.html', 'Content Page')
+    ('content_page.html', 'Content Page'),
+    ('base.html', 'Base Template')
 )
 
 CMS_PERMISSION = True
