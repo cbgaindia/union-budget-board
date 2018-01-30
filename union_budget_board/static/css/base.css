@@ -86,7 +86,7 @@ nav.navbar.navbar-default.navbar-fixed-top {
     background: white;
     border-radius: 5px;
     position: relative;
-    padding: 50px;
+    padding: 25px 50px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.19), 0 1px 3px rgba(0, 0, 0, 0.23);
 }
 
@@ -167,6 +167,9 @@ nav.navbar.navbar-default.navbar-fixed-top {
         float: left;
         margin-left: 10px;
     }
+    footer .logo img {
+        margin-top: 50px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -190,6 +193,16 @@ ul.nav.navbar-nav.navbar-right {
     font-size: 16px;
 }
 
+
+.navbar button.btn {
+    background: transparent;
+    color: white;
+}
+
+.navbar-btn {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
 
 
 
@@ -301,6 +314,7 @@ ul.nav.navbar-nav.navbar-right {
 
 
 
+
 /* CSS used for positioning the footers at the bottom of the page. */
 
 
@@ -324,3 +338,19 @@ body {
     flex: 0 0 auto;
     -webkit-flex: 0 0 auto;
 }
+
+
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+}
+
+
