@@ -1,0 +1,34 @@
+.menu-sub-line {
+    background-color: #323538;
+    padding-top: 10px;
+    color :white;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.header-vis-wrapper{
+	    padding:0px 20px;
+	        overflow: hidden;
+    max-height: 500px;
+    background: rgba(233, 234, 229, 0.13) url(https://github.com/cbgaindia/design/blob/master/portal_pages/misc/bg.png);
+}
+
+.secondary-vis-wrapper{
+	padding:0px 20px;
+	background: rgba(233, 234, 229, 0.13) url(https://github.com/cbgaindia/design/blob/master/portal_pages/misc/bg.png);	
+}
+
+.typed-content-wrapper{
+	    padding: 20px;
+    font-weight: 100;
+    font-size: 25px;
+    background: #1c2128;
+}
+
+div#type-field {
+    color: white;
+}
+
+span#typed {
+    font-weight: 900;
+}
