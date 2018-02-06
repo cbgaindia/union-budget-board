@@ -4,121 +4,126 @@
 
 <head>
     <title>
-        {% block title %} 
-            {% page_attribute "page_title" %} - {{ request.site.name }} 
-        {% endblock title %}
+        {% block title %} {% page_attribute "page_title" %} - {{ request.site.name }} {% endblock title %}
     </title>
-
     {% block css_files %}
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        
-        <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}"> 
-    {% endblock css_files %} 
-
-    {% block meta_tags %}
-    
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="{% page_attribute 'meta_description' %}">
-        <meta name="author" content=""> 
-
-    {% endblock meta_tags %}
-    
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-
-    {% render_block "css" %}
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> {% endblock css_files %} {% block meta_tags %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{% page_attribute 'meta_description' %}">
+    <meta name="author" content=""> {% endblock meta_tags %}
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"> {% render_block "css" %}
 </head>
 
 <body>
-    {% cms_toolbar %} 
-
-    {% block navbar %}
-        <nav class="navbar navbar-default  navbar-fixed-top">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Union Budget</a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        {% show_menu 0 10 10 10 %}
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
+    {% cms_toolbar %} {% block navbar %}
+    <nav class="navbar navbar-default  navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><i class="fa fa-briefcase" aria-hidden="true"></i><span class="brand-name"> Union Budget Explorer</span></a>
             </div>
-            <!-- /.container-fluid -->
-        </nav>
-    {% endblock navbar %} 
-
-    {% block outer_wrapper %}
-        <div class="base-page-outer-wrapper">
-            {% block page_content %} 
-            {% endblock page_content %}
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    {% show_menu 0 10 10 10 %}
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
+        <!-- /.container-fluid -->
+    </nav>
+    {% endblock navbar %} {% block outer_wrapper %}
+    <div class="base-page-outer-wrapper">
+        {% block page_content %} {% endblock page_content %}
+    </div>
     {% endblock outer_wrapper %}
-
     <footer id="myFooter">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-sm-3 col-sm-offset-1">
                     <h2 class="logo"><a href="#"><img src="https://raw.githubusercontent.com/cbgaindia/design/master/logo_OBI/logo_types/dark_bg_logo/draft_final/logo_with_text/draft_final.png"></a></h2>
                 </div>
-                <div class="col-sm-2">
-                    <h5>Get started</h5>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Sign up</a></li>
-                        <li><a href="#">Downloads</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-2">
-                    <h5>About us</h5>
-                    <ul>
-                        <li><a href="#">Company Information</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Reviews</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-2">
-                    <h5>Support</h5>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Help desk</a></li>
-                        <li><a href="#">Forums</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
+                <div class="col-sm-4">
                     <div class="social-networks">
-                        <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="google"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com/OpenBudgetsIn" class="twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/OpenBudgetsIndia" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="https://github.com/cbgaindia" class="google"><i class="fa fa-github"></i></a>
                     </div>
                     <button type="button" class="btn btn-default">Contact us</button>
                 </div>
+                <div class="col-sm-4">
+                <h5>OpenBudgetsIndia</h5>
+                <ul>
+                    <li><a href="https://openbudgetsindia.org/budget-basics/union-budget.html">Budget Basics</a></li>
+                    <li><a href="https://openbudgetsindia.org/about">About Us</a></li>
+                    <li><a href="https://openbudgetsindia.org/pages/license">License</a></li>
+                </ul>
             </div>
+            </div>
+            
         </div>
         <div class="footer-copyright">
-            <p>© 2016 Copyright Text </p>
+            <p>All work under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 (CC-BY)</a></p>
         </div>
     </footer>
-
-    {% render_block "js" %} 
-
-    {% block js_block %}
-    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+    <div id="fb-root"></div>
+    {% render_block "js" %} {% block js_block %}
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89349304-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-89349304-1');
+    </script>
+    <script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script>
+    window.twttr = (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+
+        t._e = [];
+        t.ready = function(f) {
+            t._e.push(f);
+        };
+
+        return t;
+    }(document, "script", "twitter-wjs"));
+    </script>
+    <script src="//platform.linkedin.com/in.js" type="text/javascript">
+    lang: en_US
+    </script>
     {% endblock js_block %}
 </body>
 
