@@ -1,25 +1,25 @@
 .menu-sub-line {
     background-color: #323538;
     padding-top: 10px;
-    color :white;
+    color: white;
     padding-bottom: 10px;
     text-align: center;
 }
 
-.header-vis-wrapper{
-	    padding:0px 20px;
-	        overflow: hidden;
-    max-height: 500px;
+.header-vis-wrapper {
+    padding: 0px 20px;
+    overflow: hidden;
+    max-height: 530px;
     background: rgba(233, 234, 229, 0.13) url(https://github.com/cbgaindia/design/blob/master/portal_pages/misc/bg.png);
 }
 
-.secondary-vis-wrapper{
-	padding:0px 20px;
-	background: rgba(233, 234, 229, 0.13) url(https://github.com/cbgaindia/design/blob/master/portal_pages/misc/bg.png);	
+.secondary-vis-wrapper {
+
+    background: rgba(233, 234, 229, 0.13) url(https://github.com/cbgaindia/design/blob/master/portal_pages/misc/bg.png);
 }
 
-.typed-content-wrapper{
-	    padding: 20px;
+.typed-content-wrapper {
+    padding: 20px;
     font-weight: 100;
     font-size: 25px;
     background: #1c2128;
@@ -31,4 +31,23 @@ div#type-field {
 
 span#typed {
     font-weight: 900;
+}
+.exp-explore-row, .receipt-explore-row, .schemes-explore-row {
+    padding: 40px;
+    color: black;
+ 	background: #E9EAE5 url(https://github.com/cbgaindia/design/blob/master/portal_pages/misc/bg.png);
+}
+.receipt-explore-row{
+	background: white
+}
+.explore-img img {
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.19), 0 1px 3px rgba(0, 0, 0, 0.23);
+    border: 1px solid rgba(0, 0, 0, 0.23);
+}
+
+.row.last-message-row {
+    background: #323538;
+    padding: 40px;
+    color: white;
 }
