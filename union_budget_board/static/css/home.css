@@ -43,6 +43,7 @@ span#typed {
 .explore-section-row{
 	padding-bottom:60px;
 	padding-top: 20px;
+	    list-style: none;
 }
 
 .receipt-explore-row {
@@ -63,7 +64,8 @@ span#typed {
 
 
 .thumbnails {
-
+	margin:0px;
+	padding:0px;
     list-style: none;
 }
 
