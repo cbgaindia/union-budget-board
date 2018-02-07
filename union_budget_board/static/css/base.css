@@ -321,3 +321,9 @@ a:hover {
 a:active {
     text-decoration: none;
 }
+
+sub.app-version {
+    color: #F8D075;
+    margin-left: -1px;
+    font-size: .4em;
+}

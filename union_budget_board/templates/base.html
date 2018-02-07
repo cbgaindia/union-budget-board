@@ -4,13 +4,21 @@
 
 <head>
     <title>
-        {% block title %} {% page_attribute "page_title" %} - {{ request.site.name }} {% endblock title %}
+        {% block title %} 
+            {% page_attribute "page_title" %} - {{ request.site.name }} 
+        {% endblock title %}
     </title>
+
     {% block css_files %}
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> {% endblock css_files %} {% block meta_tags %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    {% endblock css_files %} 
+
+    <link rel="shortcut icon" type="image/png" href="https://raw.githubusercontent.com/cbgaindia/design/master/logo_OBI/favicon/draft_final.ico/favicon.ico"/>
+
+    {% block meta_tags %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=1240">
@@ -20,7 +28,8 @@
 </head>
 
 <body>
-    {% cms_toolbar %} {% block navbar %}
+    {% cms_toolbar %} 
+    {% block navbar %}
     <nav class="navbar navbar-default  navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -31,7 +40,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/"><i class="fa fa-briefcase" aria-hidden="true"></i><span class="brand-name"> Union Budget Explorer</span></a>
+                <a class="navbar-brand" href="/"><i class="fa fa-briefcase" aria-hidden="true"></i><span class="brand-name"> Union Budget Explorer <sub class="app-version">BETA</sub></span></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
