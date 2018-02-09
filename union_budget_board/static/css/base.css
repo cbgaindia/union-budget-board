@@ -31,7 +31,7 @@ body {
 
 .base-page-outer-wrapper {
     margin-top: 70px;
-    background: rgb(233, 234, 229) url("https://github.com/cbgaindia/design/blob/master/portal_pages/misc/bg.png");
+    background: rgb(233, 234, 229) url("../img/bg.png");
 }
 
 nav.navbar.navbar-default.navbar-fixed-top {

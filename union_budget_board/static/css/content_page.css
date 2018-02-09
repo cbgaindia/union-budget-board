@@ -10,7 +10,7 @@ hr {
 
 .header-vis-wrapper {
     padding: 0px 20px;
-    background: white url(https://github.com/cbgaindia/design/blob/master/portal_pages/misc/bg.png);
+    background: white url("../img/bg.png");
 }
 
 
