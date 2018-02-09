@@ -10,12 +10,12 @@
     padding: 0px 20px;
     overflow: hidden;
     max-height: 530px;
-    background: rgba(233, 234, 229, 0.13) url(https://github.com/cbgaindia/design/blob/master/portal_pages/misc/bg.png);
+    background: rgba(233, 234, 229, 0.13) url("../img/bg.png");
 }
 
 .secondary-vis-wrapper {
 	height: 700px;
-    background: rgba(233, 234, 229, 0.13) url(https://github.com/cbgaindia/design/blob/master/portal_pages/misc/bg.png);
+    background: rgba(233, 234, 229, 0.13) url("../img/bg.png");
 }
 
 .typed-content-wrapper {
@@ -38,7 +38,7 @@ span#typed {
 .schemes-explore-row {
     padding: 40px;
     color: black;
-    background: #E9EAE5 url(https://github.com/cbgaindia/design/blob/master/portal_pages/misc/bg.png);
+    background: #E9EAE5 url("../img/bg.png");
 }
 .explore-section-row{
 	padding-bottom:60px;
