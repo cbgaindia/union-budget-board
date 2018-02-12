@@ -178,7 +178,11 @@ CMS_TEMPLATES = (
     ## Customize this
     ('fullwidth.html', 'Fullwidth'),
     ('sidebar_left.html', 'Sidebar Left'),
-    ('sidebar_right.html', 'Sidebar Right')
+    ('sidebar_right.html', 'Sidebar Right'),
+    ('home.html', 'Homepage'),
+    ('content_page.html', 'Simple - Content Page'),
+    ('base.html', 'Base Template'),
+    ('content_with_headvis.html', 'Content with Header Vis Page'),
 )
 
 CMS_PERMISSION = True

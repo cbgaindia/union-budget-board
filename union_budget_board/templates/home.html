@@ -1,0 +1,125 @@
+{% extends "base.html" %} 
+{% load cms_tags staticfiles%} 
+{% block title %} 
+{% page_attribute "page_title" %} 
+{% endblock title %} 
+
+{% block css_files %} 
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}" /> 
+{% endblock css_files %} 
+
+{% block outer_wrapper %}
+
+<div class=" base-page-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="header-vis-wrapper">
+                <div class="embed-responsive embed-responsive-16by9">
+                    {% placeholder "snippet" %}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center typed-content-wrapper">
+                <div id="typed-content">
+                    <p><strong> Data. </strong></p>
+                    <p><strong> Visualizations.</strong></p>
+                    <p><strong> Insights!</strong></p>
+                    <p><strong> Data, Visualizations, Insights!</strong></p>
+                </div>
+                <div id="type-field">Explore Union Budget 
+                    <span id="typed"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="secondary-vis-wrapper">
+                    {% placeholder "secondary-vis" %}
+            </div>
+        </div>
+        <div class="row explore-section-row">
+            <div class="row explore-row-text">
+                <div class="col-lg-8 col-lg-offset-2">
+                {% placeholder "Explore Sections Text" %}
+                </div>
+            </div>
+            <div class="row">
+                <ul class="thumbnails">
+                    <li class="col-md-4">
+                        <div class="thumbnail">
+                            <div>{% placeholder "Explore Section - Image 1  " %}</div>
+                            <h3>{% placeholder "Explore Section - Text 1  " %}</h3>
+                        </div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="thumbnail">
+                            <div>{% placeholder "Explore Section - Image 2  " %}</div>
+                            <h3>{% placeholder "Explore Section - Text 2  " %}</h3>
+                        </div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="thumbnail">
+                            <div>{% placeholder "Explore Section - Image 3  " %}</div>
+                            <h3>{% placeholder "Explore Section - Text 3  " %}</h3>
+                        </div>
+                    </li>
+                  
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row last-message-row">
+            <div class=" col-lg-6 col-lg-offset-3  text-center">
+                <div class="row">
+                {% placeholder "Stay Tuned Content" %}
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock outer_wrapper %}
+
+{% block js_block %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static 'js/typed.js' %}"></script>
+    <script>
+    $(function() {
+        $("#typed").typed({
+            strings: [""],
+            // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
+            stringsElement: $('#typed-content'),
+            // typing speed
+            typeSpeed: 30,
+            // time before typing starts
+            startDelay: 1200,
+            // backspacing speed
+            backSpeed: 20,
+            // time before backspacing
+            backDelay: 500,
+            // loop
+            loop: false,
+            // false = infinite
+            loopCount: 5,
+            // show cursor
+            showCursor: true,
+            // character for cursor
+            cursorChar: "",
+            // attribute to type (null == text)
+            attr: null,
+            // either html or text
+            contentType: 'html',
+            // call when done callback function
+            callback: function() {},
+            // starting callback function before each string
+            preStringTyped: function() {},
+            //callback for every typed string
+            onStringTyped: function() {},
+            // callback for reset
+            resetCallback: function() {}
+        });
+    });
+    </script>
+{% endblock js_block %}
+ 

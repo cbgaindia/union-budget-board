@@ -1,41 +1,140 @@
-{% load cms_tags menu_tags sekizai_tags %}
+{% load cms_tags menu_tags sekizai_tags staticfiles %}
 <!doctype html>
 <html>
-    <head>
-        <title>{% block title %}This is my new project home page{% endblock title %}</title>
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <style type="text/css">
-            .nav {
-                padding-left: 0;
-            }
-            .nav li {
-                display: inline;
-                list-style-type: none;
-                padding-right: 20px;
-            }
-            .container {
-                width: 940px;
-                margin: 0 auto
-            }
-            .content {
-                float: left;
-                width: 80%;
-            }
-            .sidebar {
-                float: left;
-                width: 20%;
-            }
-        </style>
-        {% render_block "css" %}
-    </head>
-    <body>
-        {% cms_toolbar %}
+
+<head>
+
+    {% block meta_tags %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=1240" maximum-scale=1 minimum-scale=1>
+    {% endblock meta_tags %}
+
+    <link rel="shortcut icon" type="image/png" href="https://raw.githubusercontent.com/cbgaindia/design/master/logo_OBI/favicon/draft_final.ico/favicon.ico"/>
+
+    <title>
+        {% block title %} 
+            {% page_attribute "page_title" %} - {{ request.site.name }} 
+        {% endblock title %}
+    </title>
+
+    {% block css_files %}
+    <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    {% endblock css_files %} 
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"> {% render_block "css" %}
+</head>
+
+<body>
+    {% cms_toolbar %} 
+    {% block navbar %}
+    <nav class="navbar navbar-default  navbar-fixed-top">
         <div class="container">
-            <ul class="nav">
-                {% show_menu 0 100 100 100 %}
-            </ul>
-            {% block content %}{% endblock content %}
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><i class="fa fa-briefcase" aria-hidden="true"></i><span class="brand-name"> Union Budget Explorer <sub class="app-version">BETA</sub></span></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    {% show_menu 0 10 10 10 %}
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-        {% render_block "js" %}
-    </body>
+        <!-- /.container-fluid -->
+    </nav>
+    {% endblock navbar %} {% block outer_wrapper %}
+    <div class="base-page-outer-wrapper">
+        {% block page_content %} {% endblock page_content %}
+    </div>
+    {% endblock outer_wrapper %}
+    <footer id="myFooter">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3 col-sm-offset-1">
+                    <h2 class="logo"><a href="https://openbudgetsindia.org/" target="_blank"><img src="https://raw.githubusercontent.com/cbgaindia/design/master/logo_OBI/logo_types/dark_bg_logo/draft_final/logo_with_text/draft_final.png"></a></h2>
+                </div>
+                <div class="col-sm-4">
+                    <div class="social-networks">
+                        <a href="https://twitter.com/OpenBudgetsIn" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/OpenBudgetsIndia" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="https://github.com/cbgaindia"  target="_blank" class="google"><i class="fa fa-github"></i></a>
+                    </div>
+                    <a href="https://openbudgetsindia.org/contact" target="_blank"><button type="button" class="btn btn-default">Contact us</button></a>
+                </div>
+                <div class="col-sm-4">
+                <h5>OpenBudgetsIndia</h5>
+                <ul>
+                    <li><a target="_blank" href="https://openbudgetsindia.org/budget-basics/union-budget.html">Budget Basics</a></li>
+                    <li><a target="_blank" href="https://openbudgetsindia.org/about">About Us</a></li>
+                    <li><a target="_blank" href="https://openbudgetsindia.org/pages/license">License</a></li>
+                </ul>
+            </div>
+            </div>
+            
+        </div>
+        <div class="footer-copyright">
+            <p>All work under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 (CC-BY)</a></p>
+        </div>
+    </footer>
+    <div id="fb-root"></div>
+    {% render_block "js" %} {% block js_block %}
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89349304-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-89349304-1');
+    </script>
+    <script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script>
+    window.twttr = (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+
+        t._e = [];
+        t.ready = function(f) {
+            t._e.push(f);
+        };
+
+        return t;
+    }(document, "script", "twitter-wjs"));
+    </script>
+    <script src="//platform.linkedin.com/in.js" type="text/javascript">
+    lang: en_US
+    </script>
+    {% endblock js_block %}
+</body>
+
 </html>

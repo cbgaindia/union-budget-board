@@ -1,0 +1,122 @@
+.menu-sub-line {
+    background-color: #323538;
+    padding-top: 10px;
+    color: white;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.header-vis-wrapper {
+    padding: 0px 20px;
+    overflow: hidden;
+    max-height: 530px;
+    background: rgba(233, 234, 229, 0.13) url("../img/bg.png");
+}
+
+.secondary-vis-wrapper {
+	height: 700px;
+    background: rgba(233, 234, 229, 0.13) url("../img/bg.png");
+}
+
+.typed-content-wrapper {
+    padding: 20px;
+    font-weight: 100;
+    font-size: 25px;
+    background: #1c2128;
+}
+
+div#type-field {
+    color: white;
+}
+
+span#typed {
+    font-weight: 900;
+}
+
+.explore-section-row,
+.receipt-explore-row,
+.schemes-explore-row {
+    padding: 40px;
+    color: black;
+    background: #E9EAE5 url("../img/bg.png");
+}
+.explore-section-row{
+	padding-bottom:60px;
+	padding-top: 20px;
+	    list-style: none;
+}
+
+.receipt-explore-row {
+    background: white
+}
+
+.explore-img img {
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.19), 0 1px 3px rgba(0, 0, 0, 0.23);
+    border: 1px solid rgba(0, 0, 0, 0.23);
+}
+
+.row.last-message-row {
+    background: #323538;
+    padding: 40px;
+    color: white;
+}
+
+
+.thumbnails {
+	margin:0px;
+	padding:0px;
+    list-style: none;
+}
+
+.thumbnail h3 {
+    text-align: center;
+    font-weight: 100;
+    line-height: 1.3;
+}
+
+.thumbnail {
+    min-height: 275px;
+    width: 301px;
+    margin: 0px auto;
+    background: #c1d6e9;
+    padding: 0px;
+    border: 1px solid rgba(51, 51, 51, 0.15);
+
+    display: block;
+
+    line-height: 20px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.thumbnail:hover {
+    background: white;
+}
+
+.thumbnail img {
+    border-radius: 4px 4px 0px 0px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.thumbnail:hover {
+    background: white;
+}
+
+.thumbnails .col-md-4 a {
+    text-decoration: none;
+    color: black;
+    font-size: 19px;
+}
+
+.row.explore-row-text {
+    margin-bottom: 30px;
+}
