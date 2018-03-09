@@ -187,7 +187,8 @@ CMS_TEMPLATES = (
     ('home.html', 'Homepage'),
     ('content_page.html', 'Simple - Content Page'),
     ('base.html', 'Base Template'),
-    ('content_with_headvis.html', 'Content with Header Vis Page'),
+    ('content_sidebar_main.html', 'Content - Sidebar - Main'),
+    ('content_sidebar_sub.html', 'Content - Sidebar - Sub Pages')
 )
 
 CMS_PERMISSION = True
@@ -207,7 +208,7 @@ DATABASES = {
 }
 
 MIGRATION_MODULES = {
-    
+
 }
 
 THUMBNAIL_PROCESSORS = (
@@ -232,3 +233,6 @@ META_USE_TWITTER_PROPERTIES = True
 META_USE_TITLE_TAG = True
 META_TWITTER_TYPE = "summary_large_image"
 META_TWITTER_SITE = "@OpenBudgetsIn"
+
+#Create a view which provide the template tags this value. 
+HEADER_MAX_DROPDOWN_CHILDREN = 7

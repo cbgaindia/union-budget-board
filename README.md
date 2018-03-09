@@ -4,6 +4,9 @@
 
 Untill the first release, please checkout the develop branch. 
 
+The project follows - [GitFlow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow). 
+
+
 ### Prerequisites
 
 [Virtualenv](https://virtualenv.pypa.io/en/stable/installation/) - Use a isolated python virtual environment. 
