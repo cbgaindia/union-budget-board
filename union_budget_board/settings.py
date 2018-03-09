@@ -182,7 +182,8 @@ CMS_TEMPLATES = (
     ('home.html', 'Homepage'),
     ('content_page.html', 'Simple - Content Page'),
     ('base.html', 'Base Template'),
-    ('content_with_headvis.html', 'Content with Header Vis Page'),
+    ('content_sidebar_main.html', 'Content - Sidebar - Main'),
+    ('content_sidebar_sub.html', 'Content - Sidebar - Sub Pages')
 )
 
 CMS_PERMISSION = True
@@ -202,7 +203,7 @@ DATABASES = {
 }
 
 MIGRATION_MODULES = {
-    
+
 }
 
 THUMBNAIL_PROCESSORS = (
@@ -211,3 +212,6 @@ THUMBNAIL_PROCESSORS = (
     'filer.thumbnail_processors.scale_and_crop_with_subject_location',
     'easy_thumbnails.processors.filters'
 )
+
+#Create a view which provide the template tags this value. 
+HEADER_MAX_DROPDOWN_CHILDREN = 7
