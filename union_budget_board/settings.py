@@ -28,7 +28,7 @@ SECRET_KEY = '-2@%3#q+jyz*zq%%2**=b7n8%c)qj26d=qc)eq-$4gg#981@cp'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["union2018.openbudgetsindia.org", "localhost"]
 
 
 # Application definition
@@ -69,8 +69,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(DATA_DIR, 'media')
-STATIC_ROOT = os.path.join(DATA_DIR, 'static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'union_budget_board', 'static'),
@@ -148,7 +148,12 @@ INSTALLED_APPS = (
     'djangocms_snippet',
     'djangocms_googlemap',
     'djangocms_video',
-    'union_budget_board'
+    'meta',
+    'djangocms_page_meta',
+    'union_budget_board',
+    'djangocms_fbcomments',
+    'adminsortable2',
+    'cmsplugin_socialsharekit',
 )
 
 LANGUAGES = (
@@ -194,7 +199,7 @@ DATABASES = {
         'CONN_MAX_AGE': 0,
         'ENGINE': 'django.db.backends.sqlite3',
         'HOST': 'localhost',
-        'NAME': 'project.db',
+        'NAME': '/home/cbga/ubb/project.db',
         'PASSWORD': '',
         'PORT': '',
         'USER': ''
@@ -211,3 +216,19 @@ THUMBNAIL_PROCESSORS = (
     'filer.thumbnail_processors.scale_and_crop_with_subject_location',
     'easy_thumbnails.processors.filters'
 )
+
+#As suggested in this thread: https://github.com/divio/django-cms/issues/2775
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+#DjangoCMS Meta Settings as per: http://django-meta.readthedocs.io/en/latest/settings.html
+META_SITE_PROTOCOL = "https"
+META_SITE_DOMAIN = "union2018.openbudgetsindia.org" 
+META_SITE_TYPE = "website"
+META_SITE_NAME = "Union Budget Explorer 2018-19 - Open Budgets India"
+META_INCLUDE_KEYWORDS = ["Union Budget 2018-19", "India Budget", "Budget 2018", "Union Budget", "Budget Highlights", "Budget Data", "Budget Charts", "Budget Graphs"]
+META_DEFAULT_KEYWORDS = META_INCLUDE_KEYWORDS
+META_USE_OG_PROPERTIES = True
+META_USE_TWITTER_PROPERTIES = True
+META_USE_TITLE_TAG = True
+META_TWITTER_TYPE = "summary_large_image"
+META_TWITTER_SITE = "@OpenBudgetsIn"
