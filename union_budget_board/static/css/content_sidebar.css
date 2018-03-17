@@ -61,7 +61,8 @@
 
 .content-sidebar .sidebar-list li a:hover {
     color: black;
-    border-bottom: 1px dashed black;
+    /*border-bottom: 1px dashed black;*/
+    font-weight: 800;
 }
 
 .sidebar-list i.fa.fa-circle {
@@ -184,7 +185,8 @@ ul.sidebar-breadcrumb {
 }
 
 .sidebar-sub-list li a:hover {
-    border-bottom: 1px dashed black;
+    /*border-bottom: 1px dashed black;*/
+    font-weight: 800;
     color: black;
 }
 
