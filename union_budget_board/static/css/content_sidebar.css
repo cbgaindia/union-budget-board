@@ -62,7 +62,7 @@
 .content-sidebar .sidebar-list li a:hover {
     color: black;
     /*border-bottom: 1px dashed black;*/
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .sidebar-list i.fa.fa-circle {
