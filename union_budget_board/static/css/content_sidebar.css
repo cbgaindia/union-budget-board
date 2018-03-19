@@ -186,8 +186,8 @@ ul.sidebar-breadcrumb {
 
 .sidebar-sub-list li a:hover {
     /*border-bottom: 1px dashed black;*/
-    font-weight: 800;
-    color: black;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.78);
 }
 
 .content-sidebar-sub li.active a {
@@ -215,7 +215,7 @@ ul.sidebar-breadcrumb {
 }
 
 .sidebar-breadcrumb a:hover {
-    border-bottom: 2px dashed white;
+    border-bottom: 1px dashed white;
 }
 
 .content-main-text hr {
