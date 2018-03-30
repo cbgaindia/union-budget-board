@@ -205,7 +205,7 @@ ul.sidebar-breadcrumb {
 .sidebar-sub-list li.active:before {
     content: "\f08d";
     font-size: 13px;
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 .content-header {
