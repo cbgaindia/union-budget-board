@@ -1,6 +1,7 @@
 import os
 gettext = lambda s: s
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
+
 """
 Django settings for union_budget_board project.
 
@@ -17,7 +18,6 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
@@ -200,7 +200,7 @@ DATABASES = {
         'CONN_MAX_AGE': 0,
         'ENGINE': 'django.db.backends.sqlite3',
         'HOST': 'localhost',
-        'NAME': '/home/cbga/ubb/project.db',
+        'NAME': 'project.db',
         'PASSWORD': '',
         'PORT': '',
         'USER': ''
