@@ -26,7 +26,8 @@
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
     {% endblock css_files %} 
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"> {% render_block "css" %}
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"> 
+    {% render_block "css" %}
 </head>
 
 <body>
@@ -47,18 +48,21 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    {% show_menu 0 1 1 1 'menu/menu.html' %}
+                    {% show_menu 0 1 1 1 "menu/custom_menu.html" %}
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
     </nav>
-    {% endblock navbar %} {% block outer_wrapper %}
+    {% endblock navbar %} 
+
+    {% block outer_wrapper %}
     <div class="base-page-outer-wrapper">
         {% block page_content %} {% endblock page_content %}
     </div>
     {% endblock outer_wrapper %}
+    
     <footer id="myFooter">
         <div class="container-fluid">
             <div class="row">
