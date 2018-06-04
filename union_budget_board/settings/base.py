@@ -17,24 +17,9 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
-
-
-DEBUG = True
-ALLOWED_HOSTS = []
-
-
 # Application definition
-
 ROOT_URLCONF = 'union_budget_board.urls'
-
 WSGI_APPLICATION = 'union_budget_board.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
-
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/

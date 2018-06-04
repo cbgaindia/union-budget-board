@@ -1,22 +1,29 @@
 from .base import *
+import json
+
+with open(os.path.join(BASE_DIR, 'settings') + '/production.json', 'r') as f:
+    config = json.load(f)
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-DEBUG = False
+DEBUG = config['DEBUG']['STATUS']
+
+SECRET_KEY = config['DEFAULT']['SECRET_KEY']
 
 DATABASES = {
     'default': {
-        'CONN_MAX_AGE': 0,
-        'ENGINE': 'django.db.backends.sqlite3',
-        'HOST': 'localhost',
-        'NAME': '/home/cbga/ubb/project.db',
-        'PASSWORD': '',
-        'PORT': '',
-        'USER': ''
+        'CONN_MAX_AGE': config['DATABASES']['CONN_MAX_AGE'],
+        'ENGINE': config['DATABASES']['ENGINE'],
+        'HOST': config['DATABASES']['HOST'],
+        'NAME': config['DATABASES']['NAME'],
+        'PASSWORD': config['DATABASES']['PASSWORD'],
+        'PORT': config['DATABASES']['PORT'],
+        'USER': config['DATABASES']['USER']
     }
 }
-ALLOWED_HOSTS = ["union2018.openbudgetsindia.org"]
+
+ALLOWED_HOSTS = config["HOSTS"]["ALLOWED_HOSTS"]
 
 #DjangoCMS Meta Settings as per: http://django-meta.readthedocs.io/en/latest/settings.html
 META_SITE_PROTOCOL = "https"
@@ -33,3 +40,4 @@ META_TWITTER_SITE = "@OpenBudgetsIn"
 
 #Create a view which provide the template tags this value. 
 HEADER_MAX_DROPDOWN_CHILDREN = 7
+
