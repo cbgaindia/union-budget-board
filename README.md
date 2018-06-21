@@ -1,4 +1,5 @@
-# Union Budget Board [CMS Module]
+# Union Budget Board [CMS Module] 
+Union Budget Board is a sub-component of the project Union Budget Explorer. Union Budget Explorer is one of the projects of the [OpenBudgetsIndia](https://openbudgetsindia.org/about) initiative. The project aims to enable users to search and explore union budget data using searchable tables, visualizations and supportive text. The project has been designed in way to improve the content production time with the ability to customise content using simples editors/plugins. The current project - CMS module, is responsible to provide the skeleton for the dashboard. General page templates are defined as per their suitability. 
 
 ## Getting Started
 
@@ -37,6 +38,8 @@ python manage.py migrate # Generate the schema for database.
 python manage.py createsuperuser #Run the setup to create an admin.
 python manage.py runserver # Fire up the server. 
 ```
+#### Note
+The default settings config is the development config. TD - Production Steps..
 
 #### Check the development branch 
 ```
@@ -45,12 +48,12 @@ git checkout develop
 
 ## Contributing
 
-Contributing guides would be up soon. If still want to contribute and can't wait till the first release, ping the Contributors. 
+Standard OSS rules. 
 
 ## Contributors
 
 * **Akshay Verma** - *OpenBudgetsIndia* - [akshay2905](https://github.com/akshay2905)
-* **Jayant** - *OpenBudgetsIndia* - [heaven00](https://github.com/heaven00)
+* **Jayant Pahuja** - *OpenBudgetsIndia* - [heaven00](https://github.com/heaven00)
 * **Gaurav Godhwani** - *OpenBudgetsIndia* - [gggodhwani](https://github.com/gggodhwani)
 ## License
 
