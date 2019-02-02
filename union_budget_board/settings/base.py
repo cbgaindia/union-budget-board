@@ -123,8 +123,7 @@ INSTALLED_APPS = (
     'djangocms_page_meta',
     'union_budget_board',
     'djangocms_fbcomments',
-    'adminsortable2',
-    'cmsplugin_socialsharekit',
+    'adminsortable2'
 )
 
 LANGUAGES = (
