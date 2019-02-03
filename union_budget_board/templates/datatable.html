@@ -76,7 +76,9 @@ function onDataLoad() {
         columns: tableColumns
     });
 }
-
+$x(document).ready(function () {
+        $x.fn.dataTableExt.errMode = 'ignore';
+    });
 
     d3.csv("{{ instance.url }}", function(data) {
         onDataLoad();
