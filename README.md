@@ -1,4 +1,30 @@
-# Union Budget Board [CMS Module]
+# Union Budget Explorer
+
+## Background
+
+### Union Budget of India
+
+Every year on February 1, the Finance Minister of the Republic of India gives a budget speech and submits the Annual Financial Statement to the Parliament for the upcoming financial year. These documents are a reflection of the values and priorities of the government and the people they represent. Littered across several hundreds of documents, these are often difficult to find, access, download, analayse and consume. Citizens of India are expected to go through these highly technical documents in a short span of time to be able to engage with their parliamentary representatives before it gets approved. 
+
+
+### Open Budgets India initiative
+
+Open Budgets India initiative was born out of the necessity to ensure easy access to these vital documents. The platform has more than 15,600 budget documents from across the country making it India’s largest open repository of fiscal information. While the platform houses several thousands of important documents, gleaning meaning and insights out of it often requires specialised knowledge about India’s fiscal infrastructure. 
+
+
+
+### Union Budget Explorer
+
+This explorer solves the key problems faced by citizens as they try to navigate budget documents - find, access, download, analyse and consume the budget data in an easy to understand manner. With the help of data visualisations, citizens can understand the differences between the promises made by the government (i.e. the budget estimates and revised estimates) & the eventual realisations of such promises (i.e. the actuals). 
+
+#### Key Sections of Union Budget Explorer
+
+1. Budget Profile: This section presents the comprehensive money flow data of the Union Budget. It presents both the sources of revenue of the Union Government and the expenditure commitments it has made. 
+
+
+2. Budget Summary: This section provides a small snapshot of the expenditure (spending) and receipts (income) of the union government. 
+
+3. Expenditure (Ministry & department-wise): This section presents the ministry-wise and department-wise allocations presented in the Union Budget. It provides a comprehensive searchable table to find expenditure by more than 100 ministries and departments. 
 
 ## Getting Started
 
