@@ -6,12 +6,13 @@
 
 Every year on February 1, the Finance Minister of the Republic of India gives a budget speech and submits the Annual Financial Statement to the Parliament for the upcoming financial year. These documents are a reflection of the values and priorities of the government and the people they represent. Littered across several hundreds of documents, these are often difficult to find, access, download, analayse and consume. Citizens of India are expected to go through these highly technical documents in a short span of time to be able to engage with their parliamentary representatives before it gets approved. 
 
+![budget_cycle](https://user-images.githubusercontent.com/64309749/135972021-fbffff2c-a271-4241-9eff-2c8075293f78.png)
 
 ### Open Budgets India initiative
 
 Open Budgets India initiative was born out of the necessity to ensure easy access to these vital documents. The platform has more than 15,600 budget documents from across the country making it India’s largest open repository of fiscal information. While the platform houses several thousands of important documents, gleaning meaning and insights out of it often requires specialised knowledge about India’s fiscal infrastructure. 
 
-
+![CivicDataLab_ Srishti Masterclass - Mapping Data for Change (1)](https://user-images.githubusercontent.com/64309749/135971973-6e3eeb56-a470-44cb-8cc1-36305bfd8d3b.png)
 
 ### Union Budget Explorer
 
@@ -21,8 +22,11 @@ This explorer solves the key problems faced by citizens as they try to navigate 
 
 1. Budget Profile: This section presents the comprehensive money flow data of the Union Budget. It presents both the sources of revenue of the Union Government and the expenditure commitments it has made. 
 
+![chrome_0DzQO19waA](https://user-images.githubusercontent.com/64309749/135971894-320742cb-de21-4091-b0c5-b0c15f4f6ad1.png)
 
 2. Budget Summary: This section provides a small snapshot of the expenditure (spending) and receipts (income) of the union government. 
+
+![chrome_gZSVyZW8WX](https://user-images.githubusercontent.com/64309749/135971914-bff74ab3-7419-4fec-afa0-12bd8d62986c.png)
 
 3. Expenditure (Ministry & department-wise): This section presents the ministry-wise and department-wise allocations presented in the Union Budget. It provides a comprehensive searchable table to find expenditure by more than 100 ministries and departments. 
 
